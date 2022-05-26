@@ -9,7 +9,6 @@ with open(input_file_name, 'r') as input_file:
 	input_file_text = input_file.read()
 	data = json.loads(input_file_text)
 
-
 	immediate_matches = np.array(data['immediate_tests']['matches'])
 	immediate_errors = np.array(data['immediate_tests']['errors'])
 
