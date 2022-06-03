@@ -35,9 +35,9 @@ def get_one_channel3(img):
     one_channel_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     return one_channel_img
 
-one_channel_img = get_one_channel1(img)
+one_channel_img = get_one_channel3(img)
 cv.imwrite('5_meters_g.jpg', one_channel_img)
-circles = cv.HoughCircles(one_channel_img, cv.HOUGH_GRADIENT, 1.2, 15, param1 = 45, param2 = 12, minRadius = 2, maxRadius = 20)
+circles = cv.HoughCircles(one_channel_img, cv.HOUGH_GRADIENT, 1.2, 5, param1 = 48, param2 = 13, minRadius = 4, maxRadius = 10)
 
 if circles is None:
     print('none circles is found')
